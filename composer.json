@@ -1,0 +1,49 @@
+{
+  "name": "fgalvao/laravel-geodb-client",
+  "description": "Wrapper on the GeoDB Cities API provided by fgalvao/geodb-client-api for Laravel 5.x",
+  "homepage": "https://github.com/ffgalvao/geodb-client-laravel",
+  "support": {
+    "issues": "https://github.com/ffgalvao/geodb-client-laravel/issues",
+    "source": "https://github.com/ffgalvao/geodb-client-laravel"
+  },
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Felippe Ladeira",
+      "email": "ffgalvao@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7",
+    "ext-json": "*",
+    "illuminate/support": "^5.5|^6.0|^7.0|^8.0",
+    "illuminate/contracts": "^5.5|^6.0|^7.0|^8.0",
+    "fgalvao/geodb-client-api": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.0|^7.0|^8.0",
+    "laravel/framework": "^5.5|^6.0|^7.0|^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "fGalvao\\GeoDbApi\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "fGalvao\\GeoDbApi\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "fGalvao\\GeoDbApi\\GeoDbServiceProvider"
+      ],
+      "aliases": {
+        "GeoDbApi": "fGalvao\\GeoDbApi\\GeoDbFacade"
+      }
+    }
+  }
+}
