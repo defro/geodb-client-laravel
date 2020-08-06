@@ -1,6 +1,6 @@
 {
   "name": "fgalvao/laravel-geodb-client",
-  "description": "Wrapper on the GeoDB Cities API provided by fgalvao/geodb-client-api for Laravel 5.x",
+  "description": "Wrapper on the GeoDB Cities API provided by fgalvao/geodb-client-api for Laravel",
   "homepage": "https://github.com/ffgalvao/geodb-client-laravel",
   "support": {
     "issues": "https://github.com/ffgalvao/geodb-client-laravel/issues",
