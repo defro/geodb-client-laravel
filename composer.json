@@ -42,7 +42,7 @@
         "fGalvao\\GeoCitiesApi\\GeoCitiesApiServiceProvider"
       ],
       "aliases": {
-        "GeoDbApi": "fGalvao\\GeoCitiesApi\\GeoCitiesApiFacade"
+        "GeoCitiesApi": "fGalvao\\GeoCitiesApi\\GeoCitiesApiFacade"
       }
     }
   }
