@@ -1,7 +1,7 @@
 <?php
 
 
-namespace fGalvao\GeoDbApi;
+namespace fGalvao\GeoCitiesApi;
 
 use fGalvao\BaseClientApi\HttpClient;
 use fGalvao\GeoDB\GeoDB;
@@ -10,7 +10,7 @@ use Illuminate\Support\ServiceProvider;
 use Spekkionu\Assetcachebuster\HashReplacer\ConfigHashReplacer;
 use Spekkionu\Assetcachebuster\Writer\ConfigWriter;
 
-class GeoDbServiceProvider extends ServiceProvider implements DeferrableProvider
+class GeoCitiesServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Bootstrap the application events.
@@ -20,7 +20,7 @@ class GeoDbServiceProvider extends ServiceProvider implements DeferrableProvider
     public function boot()
     {
         $this->publishes([
-            realpath(__DIR__) . '/config/geodb.php' => config_path('geodb.php'),
+            realpath(__DIR__) . '/config/geo_cities_api.php' => config_path('geo_cities_api.php'),
         ], 'config');
 
     }
@@ -33,15 +33,15 @@ class GeoDbServiceProvider extends ServiceProvider implements DeferrableProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            realpath(__DIR__) . '/config/geodb.php', 'geodb'
+            realpath(__DIR__) . '/config/geo_cities_api.php', 'geo_cities_api'
         );
 
-        $this->app->singleton('geodb', function ($app) {
+        $this->app->singleton('geoCitiesApi', function ($app) {
             $settings = [
-                'BASE_URL' => $app['config']['geodb']['BASE_URL'],
-                'API_HOST' => $app['config']['geodb']['API_HOST'],
-                'API_KEY'  => $app['config']['geodb']['API_KEY'],
-                'DEV_MODE' => $app['config']['geodb']['DEV_MODE'],
+                'BASE_URL' => $app['config']['geo_cities_api']['BASE_URL'],
+                'API_HOST' => $app['config']['geo_cities_api']['API_HOST'],
+                'API_KEY'  => $app['config']['geo_cities_api']['API_KEY'],
+                'DEV_MODE' => $app['config']['geo_cities_api']['DEV_MODE'],
             ];
 
             $clientSettings = GeoDB::buildClientSettings($settings);
@@ -56,6 +56,6 @@ class GeoDbServiceProvider extends ServiceProvider implements DeferrableProvider
      */
     public function provides()
     {
-        return ['geodb'];
+        return ['geoCitiesApi'];
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
 
-namespace fGalvao\GeoDbApi;
+namespace fGalvao\GeoCitiesApi;
 
 use Illuminate\Support\Facades\Facade;
 
-class GeoDbFacade extends Facade
+class GeoCitiesApiFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'geodb';
+        return 'geoCitiesApi';
     }
 }

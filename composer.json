@@ -28,21 +28,21 @@
   },
   "autoload": {
     "psr-4": {
-      "fGalvao\\GeoDbApi\\": "src/"
+      "fGalvao\\GeoCitiesApi\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "fGalvao\\GeoDbApi\\Tests\\": "tests/"
+      "fGalvao\\GeoCitiesApi\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "fGalvao\\GeoDbApi\\GeoDbServiceProvider"
+        "fGalvao\\GeoDbApi\\GeoCitiesServiceProvider"
       ],
       "aliases": {
-        "GeoDbApi": "fGalvao\\GeoDbApi\\GeoDbFacade"
+        "GeoDbApi": "fGalvao\\GeoDbApi\\GeoCitiesApiFacade"
       }
     }
   }
