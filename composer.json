@@ -39,10 +39,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "fGalvao\\GeoDbApi\\GeoCitiesServiceProvider"
+        "fGalvao\\GeoCitiesApi\\GeoCitiesApiServiceProvider"
       ],
       "aliases": {
-        "GeoDbApi": "fGalvao\\GeoDbApi\\GeoCitiesApiFacade"
+        "GeoDbApi": "fGalvao\\GeoCitiesApi\\GeoCitiesApiFacade"
       }
     }
   }

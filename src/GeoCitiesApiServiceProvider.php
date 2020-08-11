@@ -10,7 +10,7 @@ use Illuminate\Support\ServiceProvider;
 use Spekkionu\Assetcachebuster\HashReplacer\ConfigHashReplacer;
 use Spekkionu\Assetcachebuster\Writer\ConfigWriter;
 
-class GeoCitiesServiceProvider extends ServiceProvider implements DeferrableProvider
+class GeoCitiesApiServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Bootstrap the application events.
